@@ -2,8 +2,10 @@
 :root {
     /* fonts */
     --font-main: 'Lato', sans-serif;
-    --font-add: 'Raleway', sans-serif;
+    --font-add: 'Raleway', sans-serif;/*statt georgia */
     --fw-700: font-weight: 700;
+    --fw-600: font-weight: 600;
+    --fw-500: font-weight: 500;
     --fw-400: font-weight: 400;
     /* theme colors */
     --color-main: #01996D;
@@ -40,7 +42,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-h1,p {
+h1,h2,p {
     margin: 0;
     cursor: default;
 }
@@ -49,8 +51,6 @@ h1,p {
     max-width: 1920px;
     margin-inline: auto;
     position: relative;
-    border: 1px solid red;
-
 }
 .container {
     max-width: 1547px;
@@ -134,8 +134,11 @@ h1,p {
 }
 .nav__a {
     display: block;
-    padding: 10px;
+    font-weight: var(--fw-500);
+    padding-bottom: 10px;
     color: var(--color-nav);
+    font-size: 20px;
+    line-height: 24px;
     border-bottom: 2px solid transparent;
     transition: .2s all ease-in-out;
 }
@@ -182,4 +185,80 @@ h1,p {
 }
 /* main-screen end*/
 
+/* how */
+.how {
+    cursor: default;
+    margin-bottom: 392px;
+}
+
+/* how__top */
+
+.how__top {
+    display: flex;
+    align-items: center;
+    gap: 136px;
+    margin-bottom: 82px;
+}
+.how__top__titles {
+    flex: 0 1 584px;
+}
+.how__top__title {
+    font-family: var(--font-main);
+    font-weight: var(--fw-700);
+    font-size: 24px;
+    line-height: 157%;
+    color: var(--color-text);
+}
+.how__top__word {
+    font-family: var(--font-add);
+    font-weight: var(--fw-700);
+    font-size: 50px;
+    line-height: 157%;
+    color: var(--color-main);
+}
+.how__top__desc {
+    flex: 0 1 671px;
+    align-self: flex-end;
+    padding: 20px;
+}
+/* how-bottom */
+.how-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 66px;
+}
+.how-bottom__step {
+    display: flex;
+    flex-direction: column;
+}
+.how-bottom__title {
+    font-family:var(--font-add);
+    font-weight: var(--fw-700);
+    font-size: 30px;
+    line-height: 150%;
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+.how-bottom__desc {
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-text);
+    margin-bottom: 60px;
+    flex-grow: 1;
+    /* 
+    height: 150px;
+
+     */
+}
+.how-bottom__image {
+    max-width: 392px;
+    width: 100%;
+}
+.how-bottom__image img { 
+    max-width: 100%;
+}
+
+/* how end */
 
